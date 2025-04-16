@@ -1,11 +1,26 @@
 package com.amigoscode.Customer;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
 public class Customer{
+    @Id
+    @SequenceGenerator(
+            name = "customer_id_generator",
+            sequenceName = "customer_id_generator"
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "customer_id_generator"
+    )
     private Integer id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String email;
+    @Column(nullable = false)
     private int age;
 
     public Customer() {
@@ -13,6 +28,12 @@ public class Customer{
 
     public Customer(int id, String name, String email, int age) {
         this.id = id;
+        this.name = name;
+        this.email = email;
+        this.age = age;
+    }
+
+    public Customer(String name, String email, int age) {
         this.name = name;
         this.email = email;
         this.age = age;
