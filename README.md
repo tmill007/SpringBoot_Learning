@@ -53,17 +53,7 @@ PUT	/api/v1/customers/{id}	Update customer
 
 DELETE	/api/v1/customers/{id}	Delete customer
 
-📂 Project Structure
-arduino
-Copy
-Edit
-src/
-├── controller
-├── dto
-├── service
-├── repository
-├── model
-└── config
+
 🧪 Testing
 Use the included Postman collection or manually test endpoints with tools like curl or HTTPie.
 
