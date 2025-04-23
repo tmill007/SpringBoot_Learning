@@ -44,10 +44,15 @@ You can test the endpoints using Postman or curl.
 
 Method	Endpoint	Description
 GET	/api/v1/customers	Get all customers
+
 GET	/api/v1/customers/{id}	Get customer by ID
+
 POST	/api/v1/customers	Create new customer
+
 PUT	/api/v1/customers/{id}	Update customer
+
 DELETE	/api/v1/customers/{id}	Delete customer
+
 📂 Project Structure
 arduino
 Copy
